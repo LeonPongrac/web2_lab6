@@ -10,7 +10,7 @@
   
 <style scoped>
   header {
-    background-color: #f0f0f0;
+    background-color: #4caf50;
     padding: 10px;
     text-align: center;
   }
