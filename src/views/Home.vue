@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="main">
     <Header />
     
     <main>
@@ -22,18 +22,13 @@
 </script>
 
 <style scoped>
+.main {
+  background-color: #ffe082;
+  min-height: 900px;
+}
+
 header {
-  background-color: #f0f0f0;
-  padding: 10px;
   text-align: center;
-}
-
-nav {
-  margin-top: 10px;
-}
-
-nav a {
-  margin-right: 10px;
 }
 </style>
   
