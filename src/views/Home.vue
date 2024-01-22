@@ -1,24 +1,24 @@
 <template>
-    <div class="main">
+  <div class="main">
     <Header />
-    
+
     <main>
       <h2>Game Board</h2>
       <TicTacToeBoard />
     </main>
   </div>
-  </template>
-  
+</template>
+
 <script>
-  import TicTacToeBoard from '@/components/TicTacToeBoard.vue';
-  import Header from '@/components/Header.vue';
-  
-  export default {
-    components: {
-      TicTacToeBoard,
-      Header,
-    },
-  };
+import TicTacToeBoard from '@/components/TicTacToeBoard.vue'
+import Header from '@/components/Header.vue'
+
+export default {
+  components: {
+    TicTacToeBoard,
+    Header
+  }
+}
 </script>
 
 <style scoped>
@@ -31,4 +31,3 @@ header {
   text-align: center;
 }
 </style>
-  
