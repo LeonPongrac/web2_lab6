@@ -1,14 +1,14 @@
 <template>
-    <div :style="{ backgroundColor: boardColor }">
-      <div class="status" >{{ gameStatus }}</div>
-      <div class="board">
-        <Square
-          v-for="(value, index) in squares"
-          :key="index"
-          :value="value"
-          @click="handleClick(index)"
-        />
-      </div>
+    <div class = "gameboard" :style="{ backgroundColor: boardColor }">
+      <div class="status">{{ gameStatus }}</div>
+        <div class="board">
+          <Square
+            v-for="(value, index) in squares"
+            :key="index"
+            :value="value"
+            @click="handleClick(index)"
+          />
+        </div>
       <ResetButton @reset="resetGame" />
       <div class="score-board">
         <p>Player X: {{ playerX }}</p>
@@ -47,10 +47,10 @@
         const store = useStore();
         if (winner) {
           if (winner === "X") {
-            store.addplayerX();
+            store.playerX++;
           }
           else {
-            store.addplayerY();
+            store.playerO++;
           }
           return `Player ${winner} wins!`;
         } else if (this.squares.every((square) => square !== null)) {
@@ -105,6 +105,12 @@
 </script>
 
 <style scoped>
+.gameboard {
+  max-width: 500px;
+  display: grid;
+  border-radius: 50px;
+  margin: 20px auto;
+}
 .board {
   display: grid;
   grid-template-columns: repeat(3, 100px);
